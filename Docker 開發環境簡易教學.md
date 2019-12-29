@@ -2,7 +2,7 @@
 tags: [dev, docker]
 title: Docker 開發環境簡易教學
 created: '2019-12-28T13:56:20.279Z'
-modified: '2019-12-28T13:59:47.803Z'
+modified: '2019-12-29T11:55:38.356Z'
 ---
 
 # 簡介
@@ -14,5 +14,17 @@ modified: '2019-12-28T13:59:47.803Z'
 docker run -id {image}
 
 docker exec -it {id} bash
-
 ```
+
+## 做 fuzz test
+```bash
+docker run -id --ulimit core=-1 --privileged {image}
+```
+[參考](https://ephrain.net/docker-%E5%9C%A8-container-%E8%A3%A1%E8%A8%AD%E5%AE%9A-core-dump-%E7%9A%84%E6%AA%94%E6%A1%88%E5%90%8D%E7%A8%B1%E6%A0%BC%E5%BC%8F/)
+
+## 打包現有環境到新 image
+```bash
+docker commit {old_running_docker} {newimagename}
+```
+
+[參考](https://stackoverflow.com/questions/28302178/how-can-i-add-a-volume-to-an-existing-docker-container)
