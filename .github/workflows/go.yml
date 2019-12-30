@@ -16,18 +16,24 @@ jobs:
 #     - name: Check out code into the Go module directory
 #       uses: actions/checkout@v1
     
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+        extended: true
+        
     - name: clone blog
       run: git clone --recursive https://sappy5678:${{ secrets.hugo_blog_push }}@github.com/sappy5678/hugo_blog.git
  
-    - name: install brew
-      run: sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+#     - name: install brew
+#       run: sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
     
-    - name: install hugo
-      run: brew install hugo
+#     - name: install hugo
+#       run: brew install hugo
       
     - name: build blog
       working-directory: hugo_blog
-      run: hugo -D
+      run: hugo --minify
     
     - name: push
       working-directory: hugo_blog
