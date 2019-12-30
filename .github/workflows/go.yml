@@ -35,6 +35,9 @@ jobs:
       working-directory: hugo_blog
       run: hugo --minify
     
+    - name: set git config
+      run:  git config --global user.email "sappy5678@gmail.com" && git config --global user.name "sappy5678"
+    
     - name: push
       working-directory: hugo_blog
       run: git add . && git commit -m $GITHUB_SHA && git push 
