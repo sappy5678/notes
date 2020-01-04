@@ -26,8 +26,8 @@ jobs:
       run: git clone --recursive https://sappy5678:${{ secrets.hugo_blog_push }}@github.com/sappy5678/hugo_blog.git
  
     - name: pull notes
-      working-directory: hugo_blog/content/posts
-      run: git pull
+#       working-directory: hugo_blog/content/posts
+      run: cd hugo_blog/content/posts && git pull
 #     - name: install brew
 #       run: sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
     
