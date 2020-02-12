@@ -2,7 +2,7 @@
 title: "ubuntu 上的中文輸入法設定 Chinese Input Method Setup on Ubuntu"
 categories: [輸入法]
 tags: [輸入法, rime, ibus]
-date: 2020-02-12 12:33:20
+date: 2020-02-11 12:33:20
 ---
 
 # 緣由
