@@ -22,11 +22,9 @@ jobs:
         hugo-version: 'latest'
         extended: true
         
-    - name: open bash shopt -s extglob
-      run: shopt -s extglob
     
     - name: mv files to post folder
-      run: mkdir posts && shopt -s extglob && mv !(posts) posts && echo $(ls posts)
+      run: mkdir posts && mv $(ls | grep -v 'posts') posts && echo $(ls posts)
 
     - name: clone blog
       run: git clone --recursive https://sappy5678:${{ secrets.hugo_blog_push }}@github.com/sappy5678/hugo_blog.git
