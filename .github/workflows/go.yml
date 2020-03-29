@@ -15,6 +15,9 @@ jobs:
 
 #     - name: Check out code into the Go module directory
 #       uses: actions/checkout@v1
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
     
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
@@ -22,6 +25,10 @@ jobs:
         hugo-version: 'latest'
         extended: true
         
+    
+    - name: mv files to post folder
+      run: echo $(pwd) && echo $(ls -lha) && mkdir posts && mv $(ls | grep -v 'posts')  posts && echo $(ls posts)
+
     - name: clone blog
       run: git clone --recursive https://sappy5678:${{ secrets.hugo_blog_push }}@github.com/sappy5678/hugo_blog.git
  
@@ -36,9 +43,9 @@ jobs:
     - name: set git config
       run:  git config --global user.email "sappy5678@gmail.com" && git config --global user.name "sappy5678"
     
-    - name: push
-      working-directory: hugo_blog
-      run: git add . && git commit -m $GITHUB_SHA && git push 
+#     - name: push
+#       working-directory: hugo_blog
+#       run: git add . && git commit -m $GITHUB_SHA && git push 
 
 #     - name: build blog
 #       run: hugo -D
