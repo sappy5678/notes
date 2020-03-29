@@ -33,7 +33,7 @@ jobs:
       run: git clone --recursive https://sappy5678:${{ secrets.hugo_blog_push }}@github.com/sappy5678/hugo_blog.git
       
     - name: pull notes
-      run: rm -rf hugo_blog/content/posts && mv posts hugo_blog/content/posts
+      run: rm -rf hugo_blog/content/posts && mv posts hugo_blog/content/posts && echo $(ls hugo_blog/content/posts)
 
 #     - name: pull notes
 #       working-directory: hugo_blog/content/posts
