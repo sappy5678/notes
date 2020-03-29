@@ -21,7 +21,10 @@ jobs:
       with:
         hugo-version: 'latest'
         extended: true
-        
+
+    - name: mv files to post folder
+      run: mkdir posts && mv * posts && echo $(ls)
+
     - name: clone blog
       run: git clone --recursive https://sappy5678:${{ secrets.hugo_blog_push }}@github.com/sappy5678/hugo_blog.git
  
@@ -36,9 +39,9 @@ jobs:
     - name: set git config
       run:  git config --global user.email "sappy5678@gmail.com" && git config --global user.name "sappy5678"
     
-    - name: push
-      working-directory: hugo_blog
-      run: git add . && git commit -m $GITHUB_SHA && git push 
+#     - name: push
+#       working-directory: hugo_blog
+#       run: git add . && git commit -m $GITHUB_SHA && git push 
 
 #     - name: build blog
 #       run: hugo -D
