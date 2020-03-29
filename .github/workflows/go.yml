@@ -16,10 +16,10 @@ jobs:
 #     - name: Check out code into the Go module directory
 #       uses: actions/checkout@v1
     
-    - name: Setup timezone
-      uses: zcong1993/setup-timezone@master
-      with:
-        timezone: Asia/Taipei
+#     - name: Setup timezone
+#       uses: zcong1993/setup-timezone@master
+#       with:
+#         timezone: Asia/Taipei
     
     - uses: actions/checkout@v2
       with:
