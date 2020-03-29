@@ -21,7 +21,10 @@ jobs:
       with:
         hugo-version: 'latest'
         extended: true
-
+        
+    - name: open bash shopt -s extglob
+      run: shopt -s extglob
+    
     - name: mv files to post folder
       run: mkdir posts && shopt -s extglob && mv !(posts) posts && echo $(ls posts)
 
