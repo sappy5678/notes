@@ -41,7 +41,7 @@ jobs:
       
     - name: build blog
       working-directory: hugo_blog
-      run: hugo --minify -D
+      run: hugo --minify
     
     - name: set git config
       run:  git config --global user.email "sappy5678@gmail.com" && git config --global user.name "sappy5678"
