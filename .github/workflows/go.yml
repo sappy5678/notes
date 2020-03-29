@@ -24,7 +24,7 @@ jobs:
         
     
     - name: mv files to post folder
-      run: echo $(pwd) && echo $(ls ..) && mkdir posts && mv $(ls | grep -v 'posts')  posts && echo $(ls posts)
+      run: echo $(pwd) && echo $(ls -lha) && mkdir posts && mv $(ls | grep -v 'posts')  posts && echo $(ls posts)
 
     - name: clone blog
       run: git clone --recursive https://sappy5678:${{ secrets.hugo_blog_push }}@github.com/sappy5678/hugo_blog.git
