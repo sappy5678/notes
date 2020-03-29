@@ -2,7 +2,7 @@
 title: "跨平台 terminal 設定"
 categories: [工具]
 tags: [工具]
-date: 2020-03-28 23:49:20
+date: 2020-03-29 23:49:20
 ---
 
 # 緣由
