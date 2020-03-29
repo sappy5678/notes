@@ -1,7 +1,7 @@
 ---
 title: "cmder 設定"
-categories: [tools,命令列,cmder]
-tags: [cmder,tools,命令列,設定]
+categories: [工具,命令列,cmder]
+tags: [cmder,工具,命令列,設定]
 date: 2017-08-20 14:33:20
 ---
 
