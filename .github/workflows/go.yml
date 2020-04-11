@@ -48,9 +48,7 @@ jobs:
 #       run: echo $(ls) && git pull https://sappy5678:${{ secrets.hugo_blog_push }}@github.com/sappy5678/notes.git master
 
 
-    - name: format crlf to lf
-      working-directory: hugo_blog
-      run: find . -type f -exec sed -i "s/^M$//" {} \; 
+    
   
       
     - name: build blog
@@ -63,6 +61,10 @@ jobs:
     - name: set git config
       run:  git config --global user.email "sappy5678@gmail.com" && git config --global user.name "sappy5678"
     
+    - name: format crlf to lf
+      working-directory: hugo_blog
+      run: find . -type f -exec sed -i "s/^M$//" {} \; 
+
     - name: push
       working-directory: hugo_blog
       run: git add . && git commit -m $GITHUB_SHA && git push 
