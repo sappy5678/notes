@@ -61,9 +61,9 @@ jobs:
     - name: set git config
       run:  git config --global user.email "sappy5678@gmail.com" && git config --global user.name "sappy5678"
     
-    - name: format crlf to lf
-      working-directory: hugo_blog
-      run: find . -type f -exec sed -i "s/^M$//" {} \; 
+    # - name: format crlf to lf
+    #   working-directory: hugo_blog
+    #   run: find . -type f -exec sed -i "s/^M$//" {} \; 
 
     - name: push
       working-directory: hugo_blog
