@@ -50,7 +50,7 @@ jobs:
 
     - name: format crlf to lf
       working-directory: hugo_blog
-      run: sed -i "s/^M$//" * 
+      run: find . -type f -exec sed -i "s/^M$//" {} + \; 
   
       
     - name: build blog
