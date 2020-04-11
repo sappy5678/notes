@@ -46,6 +46,12 @@ jobs:
 #     - name: pull notes
 #       working-directory: hugo_blog/content/posts
 #       run: echo $(ls) && git pull https://sappy5678:${{ secrets.hugo_blog_push }}@github.com/sappy5678/notes.git master
+
+
+    - name: format crlf to lf
+      working-directory: hugo_blog
+      run: find . -type f -exec sed -i "s/^M$//" {} \; 
+  
       
     - name: build blog
       working-directory: hugo_blog
