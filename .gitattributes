@@ -2,3 +2,4 @@
 *.md eol=lf
 *.png binary
 core.autocrlf=false
+core.safecrlf=true
