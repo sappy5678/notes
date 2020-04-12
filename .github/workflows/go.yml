@@ -51,7 +51,9 @@ jobs:
 #       run: echo $(ls) && git pull https://sappy5678:${{ secrets.hugo_blog_push }}@github.com/sappy5678/notes.git master
 
 
-    
+    - name: debug
+      working-directory: hugo_blog
+      run: echo $(shasum -a 256 docs/css/*)
   
       
     - name: build blog
