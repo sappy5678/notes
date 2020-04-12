@@ -20,6 +20,9 @@ jobs:
 #       uses: zcong1993/setup-timezone@master
 #       with:
 #         timezone: Asia/Taipei
+
+    - name: set git config
+      run:  git config --global user.email "sappy5678@gmail.com" && git config --global user.name "sappy5678" && git config --global core.autocrlf false
     
     - uses: actions/checkout@v2
       with:
@@ -58,8 +61,7 @@ jobs:
     - name: setting CNAME
       run: echo "blog.sappy.tw" >>  hugo_blog/docs/CNAME
     
-    - name: set git config
-      run:  git config --global user.email "sappy5678@gmail.com" && git config --global user.name "sappy5678"
+
     
     # - name: format crlf to lf
     #   working-directory: hugo_blog
