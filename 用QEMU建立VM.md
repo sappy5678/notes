@@ -32,6 +32,17 @@ qemu-img create -f qcow2 1.qcow2 40G
 qemu-system-x86_64 --enable-kvm -hda 1.qcow2 -m 1024 -net nic,model=virtio -net user,hostfwd=tcp::2223-:22 -cdrom ../ubuntu-16.04.6-desktop-amd64.iso -vga std -cpu host -smp 4,cores=4,threads=1,sockets=4,maxcpus=16 -boot strict=on
 ```
 
+alpine
+```bash
+qemu-img create -f qcow2 1.qcow2 40G
+
+qemu-system-x86_64 --enable-kvm -hda 1.qcow2 -m 1024 -net nic,model=virtio -net user,hostfwd=tcp::2223-:22 -cdrom alpine-virt-3.11.5-x86_64.iso -vga std -cpu host -smp 4,cores=4,threads=1,sockets=4,maxcpus=16 -boot strict=on
+
+https://wiki.alpinelinux.org/wiki/Alpine_Install:_from_a_disc_to_a_virtualbox_machine_single_only
+
+
+```
+
 必要安裝
 ```bash
 sudo apt install openssh-server
@@ -104,5 +115,5 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90 --slave /u
 systemd-analyze blame
 
 # Todo
-* [] Compiler 優化
+* [v] Compiler 優化
 * 
