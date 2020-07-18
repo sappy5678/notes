@@ -1,7 +1,7 @@
 ---
 tags: [dev, ElasticSearch, 中文, NLP]
 categories: [ElasticSearch]
-title: Docker 開發環境簡易教學
+title: Elasticsearch 中文處理
 created: '2020-07-18T11:56:20.279Z'
 modified: '2020-07-18T13:55:38.356Z'
 ---
@@ -18,7 +18,7 @@ modified: '2020-07-18T13:55:38.356Z'
 大概長得像下面這樣  
 ```json
 {
-    origin: "",
-    token: ""
+    "origin": "",
+    "token": ""
 }
 ```

@@ -2,7 +2,7 @@
 title: "LSTM 心得"
 categories: [DL, NLP, Model]
 tags: [DL, NLP]
-date: 2020-04-3 16:46:30
+date: 2020-04-03 16:46:30
 ---
 
 # RNN
