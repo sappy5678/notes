@@ -116,4 +116,4 @@ systemd-analyze blame
 
 # Todo
 * [v] Compiler 優化
-* 
+* [[gdb簡易教學]]
