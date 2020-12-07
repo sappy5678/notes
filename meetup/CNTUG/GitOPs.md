@@ -1,10 +1,11 @@
 ---
-title: LSTM 心得
+title: GitOPs
 categories:
   - DevOps
 tags:
   - Kubernetes
   - Git
+  - CNTUG
 date: 2020-08-22T15:36:28.559Z
 ---
 
