@@ -37,4 +37,4 @@ layout: /usr/lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.20' not f
   (add-hook 'doc-view-mode-hook 'auto-revert-mode 'c++-mode-hook 'ycmd-mode)
 ```
 
-* 要記得安裝auto-complete 讓自動補權的前端顯示出來
+* 要記得安裝auto-complete 讓自動補全的前端顯示出來

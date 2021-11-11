@@ -1,8 +1,9 @@
 ---
-title: "Kubernetes 筆記"
-date: 2020-05-2 19:06:37
-tags: [Kubernetes]
+title: "Kubernetes 筆記 - Knative"
+tags: [Kubernetes, serverless]
 categories: [Kubernetes]
+created: '2020-05-02T11:56:20.279Z'
+modified: '2020-05-02T13:55:38.356Z'
 ---
 
 # kubespray

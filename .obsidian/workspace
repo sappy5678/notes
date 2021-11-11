@@ -1,0 +1,96 @@
+{
+  "main": {
+    "id": "8c3c66cf603c1971",
+    "type": "split",
+    "children": [
+      {
+        "id": "7c29bd817d115329",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "gdb簡易教學.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "060000496fbde89b",
+    "type": "split",
+    "children": [
+      {
+        "id": "97282c6d8eb47deb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f7655e74db6a9782",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "29bf79303b68175a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {}
+            }
+          },
+          {
+            "id": "e83f7fb22e565d26",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "426ca09a2ac54fd6",
+    "type": "split",
+    "children": [
+      {
+        "id": "833bde3c882144fb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4c890244ec6ce3bc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {}
+            }
+          },
+          {
+            "id": "4f1eb0584f48b577",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "lastOpenFiles": [
+    "gdb簡易教學.md",
+    "用QEMU建立VM.md",
+    "文獻管理軟體比較.md",
+    "社群網路筆記_1.md"
+  ]
+}
