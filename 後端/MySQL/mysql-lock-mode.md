@@ -6,6 +6,8 @@ tags:
   - DB
 categories:
   - MySQL
+created: 2023-01-01T09:25:19.191Z
+modified: 2023-01-01T09:25:20.617Z
 ---
 
 # mysql lock mode
