@@ -84,7 +84,7 @@ Intention lock 表示某個 transaction 想要再這個 table 的某個 record �
 
 這樣做是為了防止 `幻讀 (Phantom Reads)` 發生，亦即 t1 讀取同樣範圍兩次，但 t2 在這之間插入了一筆資料，這時候 t1 兩次讀出來的行數會不一樣，這就是 `幻讀 (Phantom Reads)`
 
-也因為這是為了防止 幻讀 (Phantom Reads) 的發生，因此如果把 transaction isolation level 切成 `[READ COMMITTED](https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-isolation-levels.html#isolevel_read-committed)` 的話，就不會產生 gap lock
+也因為這是為了防止 幻讀 (Phantom Reads) 的發生，因此如果把 transaction isolation level 切成 [READ COMMITTED](https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-isolation-levels.html#isolevel_read-committed) 的話，就不會產生 gap lock
 
 Gap lock 對於 unique index 無效，但對其他類型的 index 有效
 
@@ -120,7 +120,7 @@ Gap lock 對於 unique index 無效，但對其他類型的 index 有效
 
 當插入有 AUTO_INCREMENT 的 table 時，則會把整張表 lock 住，其他想插入的 transaction 必須等到做完後才能繼續做，這樣做是為了取得連續的 index
 
-我們可以透過 變數 `[innodb_autoinc_lock_mode](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_autoinc_lock_mode)` 來控制 lock 的行為，詳細可以看 [Section 15.6.1.6, “AUTO_INCREMENT Handling in InnoDB”](https://dev.mysql.com/doc/refman/8.0/en/innodb-auto-increment-handling.html)
+我們可以透過 變數 [innodb_autoinc_lock_mode](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_autoinc_lock_mode) 來控制 lock 的行為，詳細可以看 [Section 15.6.1.6, “AUTO_INCREMENT Handling in InnoDB”](https://dev.mysql.com/doc/refman/8.0/en/innodb-auto-increment-handling.html)
 
 # • [Predicate Locks for Spatial Indexes](https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html#innodb-predicate-locks)
 
