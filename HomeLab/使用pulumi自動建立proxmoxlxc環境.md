@@ -14,9 +14,6 @@ modified: 2024-01-14T15:18:00.351Z
 ---
 # 使用 Pulumi 自動建立 Proxmox LXC 環境
 
-Tags: blog, proxmox, pulumi
-Parent item: Pulumi (https://www.notion.so/Pulumi-cc595460967a4fb488579f3ebc5afc53?pvs=21)
-
 # 簡介
 
 最近在嘗試使用 Pulumi + ProxmoxVE 搭建 HomeLab 的開發環境 
