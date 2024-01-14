@@ -1,0 +1,3 @@
+[submodule "static"]
+	path = static
+	url = https://github.com/sappy5678/Images.git
